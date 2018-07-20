@@ -33,10 +33,80 @@ main {
 }
 
 nav {
-  background-color: #f90;
+ 
   padding: 20px;
 }
- 
+
+nav{
+
+    padding: 15px 10px;   
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+}
+nav li{
+    display: inline-block;
+    vertical-align: top;
+}
+nav a{
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+nav a:hover{
+    border: 1px solid #fff;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+nav label {    
+    display: none;
+    border: 1px solid #fff;   
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+nav label:hover{
+    color: #f00;
+    border: 1px solid #f00;
+}
+
+#show > .hide
+{
+  display: none;
+  
+  text-align: left;
+}
+
+#show > .hide > a
+{
+  color: #fff;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 500px) {
+    
+    #show > .hide
+    {
+      display: block;
+    }
+
+    /* nav label{
+         display: inline-block;
+    } */
+    nav > ul {
+        display: none;
+    }
+    input[type="checkbox"]:checked ~ label + ul {
+        display: block;
+    }
+    
+}
+
+
 aside {
   padding: 20px;
   background-color: #eee;
@@ -259,7 +329,10 @@ display: -webkit-box;
 #myNav {
    width: 0%;
 }
+
+
 #show:target #myNav {
+
     width:100%;
 }
 .aside-container {
@@ -297,7 +370,7 @@ display: -webkit-box;
 }
 
 #search {
-  outline: 0px;
+  outline: 0;
   display: inline-block;
 
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -307,7 +380,7 @@ display: -webkit-box;
 }
 
 #search > .textbox {
-  outline: 0px;
+  outline: 0;
   height: 42px;
  
   display: inline-block;
@@ -328,7 +401,7 @@ display: -webkit-box;
 
 #search > .button {
   outline: 0;
-  background: transparent;
+  background: none;
   background-color: rgba(38, 50, 56, 0.8);
   display: inline-block;
   height: 42px;
@@ -369,7 +442,7 @@ display: -webkit-box;
   height: 30px;
   padding: 5px;
   width: auto;
-  margin: 5px;
+  margin 5px;
   border-radius: 5px;
   color: #333;
   text-decoration: none;
@@ -424,6 +497,9 @@ display: -webkit-box;
 }
 
 @media (min-width: 768px) {
+  
+
+
   .container {
     display: grid;
     grid-template-columns:  3fr 1fr;
@@ -435,7 +511,7 @@ display: -webkit-box;
   .overlay a {font-size: 20px}
   .overlay .closebtn {
     font-size: 40px;
-    top: 15px;
+    top: 15px;s
     right: 35px;
   }
 }
